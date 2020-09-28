@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "728675374124",
+    "firebase_url": "https://toktok-dev-test.firebaseio.com",
+    "project_id": "toktok-dev-test",
+    "storage_bucket": "toktok-dev-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728675374124:android:79cc7c0b470bf25ba76d89",
+        "android_client_info": {
+          "package_name": "com.flutter.toktok.toktok_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728675374124-dv40kh811u082ebm2fkdpb9oanh64gmo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutter.toktok.toktok_app",
+            "certificate_hash": "eda3a65eedb2437c83dfbc4d32b3c651aebd341b"
+          }
+        },
+        {
+          "client_id": "728675374124-ntpbcl8une3hn337un4f042ltfgd507c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutter.toktok.toktok_app",
+            "certificate_hash": "e15d6d7d2a38d760a6f923ae2694b44b9a2113ca"
+          }
+        },
+        {
+          "client_id": "728675374124-i81ooeov8jvpnke08l9rpre6anhkht5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcy8xXMJHlCfXe36MgSwmjhUmXCb45T1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728675374124-i81ooeov8jvpnke08l9rpre6anhkht5j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
