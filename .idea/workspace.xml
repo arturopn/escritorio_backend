@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0784df14-1e80-4b3f-89ff-d8cd6a295d19" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +216,9 @@
       <updated>1603195271413</updated>
       <workItem from="1603195272487" duration="849000" />
       <workItem from="1603199954942" duration="84000" />
-      <workItem from="1603287958249" duration="8436000" />
+      <workItem from="1603287958249" duration="10616000" />
+      <workItem from="1603303116753" duration="80000" />
+      <workItem from="1603305093752" duration="1076000" />
     </task>
     <servers />
   </component>
@@ -233,8 +235,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1576" y="110" width="1536" height="901" key="DiffContextDialog" timestamp="1603296895004">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1576" y="110" width="1536" height="901" key="DiffContextDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603296895004" />
+    <state x="2135" y="237" width="428" height="640" key="RollbackChangesDialog" timestamp="1603296896528">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2135" y="237" width="428" height="640" key="RollbackChangesDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603296896528" />
     <state x="2045" y="292" width="618" height="522" key="find.popup" timestamp="1603296605203">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
