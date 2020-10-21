@@ -20,7 +20,7 @@ class Services extends Model
     use SoftDeletes;
 
     public $table = 'services';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -30,6 +30,7 @@ class Services extends Model
         'name',
         'description',
         'price',
+        'image',
         'status'
     ];
 
@@ -43,6 +44,7 @@ class Services extends Model
         'name' => 'string',
         'description' => 'string',
         'price' => 'decimal:2',
+        'image' => 'string',
         'status' => 'boolean'
     ];
 
@@ -52,8 +54,8 @@ class Services extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+
 }
