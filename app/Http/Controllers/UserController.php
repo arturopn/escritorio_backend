@@ -530,9 +530,9 @@ class UserController extends ApiController
     }
 
     public function getAllUsers($id){
-      
 
-     
+
+
       $user = DB::table('users')->get();
        //echo($user);
        return $this->showAll($user);
@@ -545,7 +545,7 @@ class UserController extends ApiController
     public function agregarInvitacion($info){
 
       $data = array('name'=>"jesus","body"=>"Testsmail");
- 
+
       Mail::send('tpl', $data, function($message)
        {
       $message->from('fetchup@fetchup.io', "Admin - ****");

@@ -25,7 +25,10 @@
         "nexmo/client": "^1.8",
         "openpay/sdk": "dev-master",
         "paypal/rest-api-sdk-php": "*",
-        "lunasoft/sw-sdk-php": "dev-master"
+        "lunasoft/sw-sdk-php": "dev-master",
+        "infyomlabs/laravel-generator": "5.8.x-dev",
+        "laravelcollective/html": "^5.8.0",
+        "infyomlabs/adminlte-templates": "5.8.x-dev"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

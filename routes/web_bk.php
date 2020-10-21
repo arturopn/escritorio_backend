@@ -37,8 +37,3 @@ URL::forceScheme('https');
 // Route::get('/', function () {
 //   return view('welcome');
 // })->middleware('guest');
-
-
-Auth::routes(['verify' => true]);
-
-Route::get('/home', 'HomeController@index')->middleware('verified');
