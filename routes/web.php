@@ -42,3 +42,5 @@ URL::forceScheme('https');
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->middleware('verified');
+
+Route::resource('services', 'ServicesController');

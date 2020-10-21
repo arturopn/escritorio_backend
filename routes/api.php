@@ -113,3 +113,6 @@ Route::name('created_by_user_qr')->get('qr/createdBy/{userId}', 'QRController@cr
 
 Route::post('oauth/token', '\Laravel\Passport\Http\Controllers\AccessTokenController@issueToken');
 //URL::forceScheme('https');
+
+
+Route::resource('services', 'ServicesAPIController');
