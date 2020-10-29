@@ -134,7 +134,16 @@ class OpenPayController extends ApiController
 
     public function addCustomer(Request $request){
         try {
-            $openpay = Openpay::getInstance(env('OPENPAY_ID'), env('OPENPAY_SK'));
+        if(getenv('OPENPAY_ID')) {
+          $OPENPAY_ID = getenv('OPENPAY_ID')
+          $OPENPAY_SK = getenv('OPENPAY_SK')
+        }
+        else{
+          $OPENPAY_ID = env('OPENPAY_ID');
+          $OPENPAY_SK = env('OPENPAY_SK');
+        }
+    
+            $openpay = Openpay::getInstance($OPENPAY_ID, $OPENPAY_SK));
             Openpay::setProductionMode(env('OPENPAY_PRODUCTION_MODE'));
             $customerData = array(
             'name' => $request->name,
