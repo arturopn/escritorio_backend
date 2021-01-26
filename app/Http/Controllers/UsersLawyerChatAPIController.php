@@ -8,6 +8,7 @@ use App\Models\UsersLawyerChat;
 use App\Repositories\UsersLawyerChatRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
+use Illuminate\Support\Facades\DB;
 use Response;
 
 /**
@@ -40,6 +41,7 @@ class UsersLawyerChatAPIController extends AppBaseController
             $request->get('limit')
         );
 
+
         return $this->sendResponse($usersLawyerChats->toArray(), 'Users Lawyer Chats retrieved successfully');
     }
 
@@ -56,6 +58,13 @@ class UsersLawyerChatAPIController extends AppBaseController
         $input = $request->all();
 
         $usersLawyerChat = $this->usersLawyerChatRepository->create($input);
+
+        $users = DB::table('users')
+            ->join('user_roles', 'user_roles.userId', '=', 'users.userId')
+            ->get()
+            ->random(1);
+
+        $input['user_id'] = $users->id;
 
         return $this->sendResponse($usersLawyerChat->toArray(), 'Users Lawyer Chat saved successfully');
     }
