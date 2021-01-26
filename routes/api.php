@@ -116,3 +116,6 @@ Route::post('oauth/token', '\Laravel\Passport\Http\Controllers\AccessTokenContro
 
 
 Route::resource('services', 'ServicesAPIController');
+
+
+Route::resource('users_lawyer_chats', 'UsersLawyerChatAPIController');
