@@ -22,7 +22,6 @@
     <list default="true" id="0784df14-1e80-4b3f-89ff-d8cd6a295d19" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersLawyerChatAPIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersLawyerChatAPIController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,6 +223,8 @@
       <workItem from="1603307564368" duration="133000" />
       <workItem from="1611685245447" duration="2499000" />
       <workItem from="1611693019065" duration="589000" />
+      <workItem from="1611693674078" duration="26000" />
+      <workItem from="1611694206330" duration="153000" />
     </task>
     <servers />
   </component>

@@ -61,6 +61,7 @@ class UsersLawyerChatAPIController extends AppBaseController
 
         $users = DB::table('users')
             ->join('user_roles', 'user_roles.userId', '=', 'users.userId')
+            ->where('user_roles.rolId', 2)
             ->get()
             ->random(1);
 
