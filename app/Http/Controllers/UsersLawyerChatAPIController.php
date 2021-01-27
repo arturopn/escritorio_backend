@@ -57,8 +57,6 @@ class UsersLawyerChatAPIController extends AppBaseController
     {
         $input = $request->all();
 
-        $usersLawyerChat = $this->usersLawyerChatRepository->create($input);
-
         $users = DB::table('users')
             ->join('user_roles', 'user_roles.userId', '=', 'users.userId')
             ->where('user_roles.rolId', 2)
@@ -66,6 +64,8 @@ class UsersLawyerChatAPIController extends AppBaseController
             ->random(1);
 
         $input['user_id'] = $users->id;
+
+        $usersLawyerChat = $this->usersLawyerChatRepository->create($input);
 
         return $this->sendResponse($usersLawyerChat->toArray(), 'Users Lawyer Chat saved successfully');
     }
