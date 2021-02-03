@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Builder;
 
-class   n User extends Authenticatable
+class User extends Authenticatable
 {
     use Notifiable, HasApiTokens;
 

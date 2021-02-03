@@ -135,8 +135,8 @@ class OpenPayController extends ApiController
     public function addCustomer(Request $request){
         try {
         if(getenv('OPENPAY_ID')) {
-          $OPENPAY_ID = getenv('OPENPAY_ID')
-          $OPENPAY_SK = getenv('OPENPAY_SK')
+          $OPENPAY_ID = getenv('OPENPAY_ID');
+          $OPENPAY_SK = getenv('OPENPAY_SK');
         }
         else{
           $OPENPAY_ID = env('OPENPAY_ID');

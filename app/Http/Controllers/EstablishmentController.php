@@ -173,64 +173,9 @@ class EstablishmentController extends ApiController
     }
 
     public function calculate_payment(Request $request){
-      $establishmentId = $request->establishmentId;
-      $discount = $request->discount;
-      $hours = $request->hours;
-      $minutes = $request->minutes;
-
-      $rate = Rate::where('establishmentId', $establishmentId)->firstOrFail();
-      $establishment = Establishment::where('establishmentId', $establishmentId)->firstOrFail();
-      $owner = User::where('userId', $establishment->ownerId)->firstOrFail();
-
-      //Here we identify if the user is under the tolerance time so we don't charge anything
-      if ($hours == 0 && $minutes < $rate->tolerance) {
-        return response()->json(['total' => 0], 200);
-      }
-
-      //Here we add as an hour the minutes passed
-      if ($minutes > 0 ) {
-        $hours = $hours + 1;
-      }
-
-      //Set the base charge and deduct one hour of parking
-      //If it reaches 0 the user was only there for an hours
-      //then everytging is irrelevant
-      $total = $rate->charge_1;
-      $hours = $hours - 1;
-
-      //Here we identify if the first two hours are charged as one
-      if ($rate->is_double) {
-        $hours = $hours - 1;
-      }
-
-      if ($hours < 1) {
-        return response()->json(['total' => ($total - $discount ), 'oppToken' => $owner->open_pay_token], 200);
-      }
-
-      //Here we cover parking that charges the same amount per hour
-      if ($rate->one_time_payment) {
-       $total = $total + ($hours * $rate->charge_1);
-       return response()->json(['total' => ($total - $discount ), 'oppToken' => $owner->open_pay_token], 200);
-      }
-
-      //Now we identify that the establishment has 3 rates
-      if($rate->subsequent != null){
-
-        $total = $total + $rate->charge_2;
-        $hours = $hours - 1;
-        $total = $total + ($rate->subsequent * $hours);
-
-        return response()->json(['total' => ($total - $discount ), 'oppToken' => $owner->open_pay_token], 200);
-
-      }
-
-      //If the establishment has 2 types of rates
-      if ($hours > 1) {
-        $total = $total + ($rate->charge_2 * $hours);
-      }
-
-      return response()->json(['total' => ($total - $discount ), 'oppToken' => $owner->open_pay_token], 200);
-
+      $total = 10000;
+      $discount = 0;
+      return response()->json(['total' => ($total - $discount )]);
     }
 
     public function get_user_establishments($userId){
