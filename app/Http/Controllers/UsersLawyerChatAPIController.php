@@ -63,9 +63,7 @@ class UsersLawyerChatAPIController extends AppBaseController
             ->get()
             ->random(1);
 
-        dd($users);
-
-        $input['user_id'] = $users->id;
+        $input['lawyer_id'] = $users[0]->userId;
 
         $usersLawyerChat = $this->usersLawyerChatRepository->create($input);
 
