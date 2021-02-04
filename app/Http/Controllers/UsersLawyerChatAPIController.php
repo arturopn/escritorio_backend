@@ -67,6 +67,8 @@ class UsersLawyerChatAPIController extends AppBaseController
 
         $usersLawyerChat = $this->usersLawyerChatRepository->create($input);
 
+        $usersLawyerChat = UsersLawyerChat::with(['user', 'lawyer'])->find($usersLawyerChat->id);
+
         return $this->sendResponse($usersLawyerChat->toArray(), 'Users Lawyer Chat saved successfully');
     }
 
