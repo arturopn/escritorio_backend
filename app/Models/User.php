@@ -56,9 +56,7 @@ class User extends Authenticatable
         'password',
         'remember_token',
         'facebookToken',
-        'googleToken',
         'verification_token'
-
     ];
 
     /**
