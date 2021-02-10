@@ -64,6 +64,7 @@ class UsersLawyerChatAPIController extends AppBaseController
             ->random(1);
 
         $input['lawyer_id'] = $users[0]->userId;
+        $input['firebase_lawyerId'] = $users[0]->googleToken;
 
         $usersLawyerChat = $this->usersLawyerChatRepository->create($input);
 
@@ -83,7 +84,8 @@ class UsersLawyerChatAPIController extends AppBaseController
     public function show($id)
     {
         /** @var UsersLawyerChat $usersLawyerChat */
-        $usersLawyerChat = $this->usersLawyerChatRepository->find($id);
+        //$usersLawyerChat = $this->usersLawyerChatRepository->find($id);
+        $usersLawyerChat = UsersLawyerChat::with(['user','lawyer'])->where('user_id', $id)->get();
 
         if (empty($usersLawyerChat)) {
             return $this->sendError('Users Lawyer Chat not found');
