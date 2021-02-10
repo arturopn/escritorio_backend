@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0784df14-1e80-4b3f-89ff-d8cd6a295d19" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersLawyerChatAPIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersLawyerChatAPIController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UsersLawyerChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UsersLawyerChat.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +233,7 @@
       <workItem from="1612411387696" duration="449000" />
       <workItem from="1612412162493" duration="19000" />
       <workItem from="1612884677742" duration="109000" />
-      <workItem from="1612980594271" duration="981000" />
+      <workItem from="1612980594271" duration="1567000" />
     </task>
     <servers />
   </component>

@@ -32,7 +32,8 @@ class UsersLawyerChat extends Model
         'lawyer_id',
         'firebase_chatId',
         'firebase_userId',
-        'firebase_lawyerId'
+        'firebase_lawyerId',
+        'status'
     ];
 
     /**
