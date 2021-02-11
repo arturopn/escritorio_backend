@@ -85,7 +85,16 @@ class UsersLawyerChatAPIController extends AppBaseController
     {
         /** @var UsersLawyerChat $usersLawyerChat */
         //$usersLawyerChat = $this->usersLawyerChatRepository->find($id);
-        $usersLawyerChat = UsersLawyerChat::with(['user','lawyer'])->where('user_id', $id)->get();
+        $lawyer = DB::table('user_roles')->where([
+            ['userId', '=', $id],
+            ['rolId', '=', '2'],
+          ])->first();
+        
+        if($lawyer){
+            $usersLawyerChat = UsersLawyerChat::with(['user','lawyer'])->where('lawyer_id', $id)->get();
+        }else{
+            $usersLawyerChat = UsersLawyerChat::with(['user','lawyer'])->where('user_id', $id)->get();
+        }
 
         if (empty($usersLawyerChat)) {
             return $this->sendError('Users Lawyer Chat not found');
