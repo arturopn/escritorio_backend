@@ -177,7 +177,10 @@ class UsersLawyerChatAPIController extends AppBaseController
         $downstreamResponse->numberSuccess();
         $downstreamResponse->numberFailure();
         $downstreamResponse->numberModification();
-        }
         return $this->sendSuccess('Message Send');
+        }
+        else{
+        return $this->sendSuccess('Message Not Send');
+        }
     }
 }
