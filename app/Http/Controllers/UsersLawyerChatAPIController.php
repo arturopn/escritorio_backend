@@ -66,9 +66,12 @@ class UsersLawyerChatAPIController extends AppBaseController
             ->get()
             ->random(1);
 
-        $input['user_id'] = $users->id;
+        $input['lawyer_id'] = $users[0]->userId;
+        $input['firebase_lawyerId'] = $users[0]->googleToken;
 
         $usersLawyerChat = $this->usersLawyerChatRepository->create($input);
+
+        $usersLawyerChat = UsersLawyerChat::with(['user', 'lawyer'])->find($usersLawyerChat->id);
 
         return $this->sendResponse($usersLawyerChat->toArray(), 'Users Lawyer Chat saved successfully');
     }
@@ -84,7 +87,17 @@ class UsersLawyerChatAPIController extends AppBaseController
     public function show($id)
     {
         /** @var UsersLawyerChat $usersLawyerChat */
-        $usersLawyerChat = $this->usersLawyerChatRepository->find($id);
+        //$usersLawyerChat = $this->usersLawyerChatRepository->find($id);
+        $lawyer = DB::table('user_roles')->where([
+            ['userId', '=', $id],
+            ['rolId', '=', '2'],
+          ])->first();
+        
+        if($lawyer){
+            $usersLawyerChat = UsersLawyerChat::with(['user','lawyer'])->where('lawyer_id', $id)->get();
+        }else{
+            $usersLawyerChat = UsersLawyerChat::with(['user','lawyer'])->where('user_id', $id)->get();
+        }
 
         if (empty($usersLawyerChat)) {
             return $this->sendError('Users Lawyer Chat not found');
