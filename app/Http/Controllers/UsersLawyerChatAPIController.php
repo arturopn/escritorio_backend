@@ -10,7 +10,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Support\Facades\DB;
 use Response;
-
+use LaravelFCM\Message\OptionsBuilder;
+use LaravelFCM\Message\PayloadDataBuilder;
+use LaravelFCM\Message\PayloadNotificationBuilder;
+use FCM;
 /**
  * Class UsersLawyerChatController
  * @package App\Http\Controllers
@@ -137,5 +140,30 @@ class UsersLawyerChatAPIController extends AppBaseController
         $usersLawyerChat->delete();
 
         return $this->sendSuccess('Users Lawyer Chat deleted successfully');
+    }
+
+    public function sendNotification (Request $request)
+    {
+        $data = $request->all();
+        $notificationBuilder = new PayloadNotificationBuilder();
+        $notificationBuilder->setTitle('¡Tienes un nuevo mensaje!')
+                ->setBody($request->description);
+
+        $notification = $notificationBuilder->build();
+        // $token = "eHExYLXTKj8:APA91bH4kXrWSigXjI_UaRWUbxdgMga1OiZ5agG28Z97uc0MUoZ90EtPM3CZ_9k3wqVvquNH4Jy3svIumJYRn1gWyLhgWX85PBByACtfowzyG37yHzFa7GZFpt9PNikiKJgWCw_Zt1El";
+        $tokens = User::whereNotNull('firebase_registration_token')->get(['firebase_registration_token']);
+        $tokenArr = array();
+        if(!empty($tokenArr)){
+        foreach ($tokens as $token) {
+          array_push($tokenArr, $token->firebase_registration_token);
+        }
+
+        $downstreamResponse = FCM::sendTo($tokenArr, null, $notification, null);
+
+        $downstreamResponse->numberSuccess();
+        $downstreamResponse->numberFailure();
+        $downstreamResponse->numberModification();
+        }
+        return $this->sendSuccess('Message Send');
     }
 }
