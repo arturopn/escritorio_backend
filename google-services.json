@@ -1,50 +1,50 @@
 {
   "project_info": {
-    "project_number": "728675374124",
-    "firebase_url": "https://toktok-dev-test.firebaseio.com",
-    "project_id": "toktok-dev-test",
-    "storage_bucket": "toktok-dev-test.appspot.com"
+    "project_number": "811756378024",
+    "firebase_url": "https://escritorio-legal.firebaseio.com",
+    "project_id": "escritorio-legal",
+    "storage_bucket": "escritorio-legal.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:728675374124:android:79cc7c0b470bf25ba76d89",
+        "mobilesdk_app_id": "1:811756378024:android:ffa445ff4b75577c5c2f9d",
         "android_client_info": {
-          "package_name": "com.flutter.toktok.toktok_app"
+          "package_name": "com.escritorioabogados.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "728675374124-dv40kh811u082ebm2fkdpb9oanh64gmo.apps.googleusercontent.com",
+          "client_id": "811756378024-h0ll0tmdk32bps3s4dl4pc922g1f8lbf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.flutter.toktok.toktok_app",
-            "certificate_hash": "eda3a65eedb2437c83dfbc4d32b3c651aebd341b"
+            "package_name": "com.escritorioabogados.app",
+            "certificate_hash": "ef1a40a4266d6b7808572e7975a2c2d509397ea7"
           }
         },
         {
-          "client_id": "728675374124-ntpbcl8une3hn337un4f042ltfgd507c.apps.googleusercontent.com",
+          "client_id": "811756378024-mov2qq9f35kk0sul5egrn5uoqtujg3ea.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.flutter.toktok.toktok_app",
+            "package_name": "com.escritorioabogados.app",
             "certificate_hash": "e15d6d7d2a38d760a6f923ae2694b44b9a2113ca"
           }
         },
         {
-          "client_id": "728675374124-i81ooeov8jvpnke08l9rpre6anhkht5j.apps.googleusercontent.com",
+          "client_id": "811756378024-098hu4bpv7bkcbv6b0856btmjdtbbl0h.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCcy8xXMJHlCfXe36MgSwmjhUmXCb45T1Y"
+          "current_key": "AIzaSyCTxKyldDgJeNLVLUdmV14R-7uFY5V2mII"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "728675374124-i81ooeov8jvpnke08l9rpre6anhkht5j.apps.googleusercontent.com",
+              "client_id": "811756378024-098hu4bpv7bkcbv6b0856btmjdtbbl0h.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
