@@ -21,7 +21,7 @@ class UsersLawyerChat extends Model
     use SoftDeletes;
 
     public $table = 'users_lawyer_chats';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -32,7 +32,8 @@ class UsersLawyerChat extends Model
         'lawyer_id',
         'firebase_chatId',
         'firebase_userId',
-        'firebase_lawyerId'
+        'firebase_lawyerId',
+        'status'
     ];
 
     /**
@@ -55,8 +56,17 @@ class UsersLawyerChat extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function lawyer()
+    {
+        return $this->belongsTo(User::class, 'lawyer_id');
+    }
+
 }

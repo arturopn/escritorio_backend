@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0784df14-1e80-4b3f-89ff-d8cd6a295d19" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OpenPayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OpenPayController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,10 +229,7 @@
       <workItem from="1611777819699" duration="163000" />
       <workItem from="1611950363416" duration="7000" />
       <workItem from="1612290451992" duration="460000" />
-      <workItem from="1612291248470" duration="797000" />
-      <workItem from="1612294151287" duration="46000" />
-      <workItem from="1612408006265" duration="5000" />
-      <workItem from="1613569903700" duration="9000" />
+      <workItem from="1612291248470" duration="677000" />
     </task>
     <servers />
   </component>
