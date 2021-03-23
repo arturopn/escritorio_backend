@@ -91,7 +91,7 @@ class UserController extends ApiController
       ]);
 
       $user->phone_number= '+'.$user->cellphone;   // Don't forget specify country code.
-     // $user->notify(new SMSCode($user->verification_token));
+      $user->notify(new SMSCode($user->verification_token));
 
       return $this->showOne($user, 201);
     }
@@ -277,14 +277,14 @@ class UserController extends ApiController
           'rolId' => 5
         ]);
         $user->phone_number= '+'.$user->cellphone;   // Don't forget specify country code.
-     //  $user->notify(new SMSCode($user->verification_token));
+       $user->notify(new SMSCode($user->verification_token));
 
           return response()->json(['code'=> $user->verification_token, 'userId' => $user->userId], 200);
       } else {
         foreach ($roles as $role) {
           if ($role->userId == $user->userId && $role->rolId == 5) {
             $user->phone_number= '+'.$user->cellphone;   // Don't forget specify country code.
-          // $user->notify(new SMSCode($user->verification_token));
+           $user->notify(new SMSCode($user->verification_token));
 
             return response()->json(['code'=> $user->verification_token, 'userId' => $user->userId], 200);
           } else {
@@ -293,7 +293,7 @@ class UserController extends ApiController
               'rolId' => 5
             ]);
             $user->phone_number= '+'.$user->cellphone;   // Don't forget specify country code.
-          // $user->notify(new SMSCode($user->verification_token));
+           $user->notify(new SMSCode($user->verification_token));
 
             return response()->json(['code'=> $user->verification_token, 'userId' => $user->userId], 200);
           }
@@ -328,14 +328,14 @@ class UserController extends ApiController
           'rolId' => 5
         ]);
         $user->phone_number= '+'.$user->cellphone;   // Don't forget specify country code.
-      //  $user->notify(new SMSCode($user->verification_token));
+        $user->notify(new SMSCode($user->verification_token));
 
           return response()->json(['code'=> $user->verification_token, 'userId' => $user->userId], 200);
       } else {
         foreach ($roles as $role) {
           if ($role->userId == $user->userId && $role->rolId == 5) {
             $user->phone_number= '+'.$user->cellphone;   // Don't forget specify country code.
-          //  $user->notify(new SMSCode($user->verification_token));
+            $user->notify(new SMSCode($user->verification_token));
 
             return response()->json(['code'=> $user->verification_token, 'userId' => $user->userId], 200);
           } else {
@@ -344,7 +344,7 @@ class UserController extends ApiController
               'rolId' => 5
             ]);
             $user->phone_number= '+'.$user->cellphone;   // Don't forget specify country code.
-          // $user->notify(new SMSCode($user->verification_token));
+           $user->notify(new SMSCode($user->verification_token));
 
             return response()->json(['code'=> $user->verification_token, 'userId' => $user->userId], 200);
           }
@@ -410,14 +410,14 @@ class UserController extends ApiController
           'rolId' => 5
         ]);
         $user->phone_number= '+'.$user->cellphone;   // Don't forget specify country code.
-       // $user->notify(new SMSCode($user->verification_token));
+        $user->notify(new SMSCode($user->verification_token));
 
           return response()->json(['code'=> $user->verification_token, 'userId' => $user->userId], 200);
       } else {
         foreach ($roles as $role) {
           if ($role->userId == $user->userId && $role->rolId == 5) {
             $user->phone_number= '+'.$user->cellphone;   // Don't forget specify country code.
-          // $user->notify(new SMSCode($user->verification_token));
+           $user->notify(new SMSCode($user->verification_token));
 
             return response()->json(['code'=> $user->verification_token, 'userId' => $user->userId], 200);
           } else {
@@ -426,7 +426,7 @@ class UserController extends ApiController
               'rolId' => 5
             ]);
             $user->phone_number= '+'.$user->cellphone;   // Don't forget specify country code.
-           //$user->notify(new SMSCode($user->verification_token));
+           $user->notify(new SMSCode($user->verification_token));
 
             return response()->json(['code'=> $user->verification_token, 'userId' => $user->userId], 200);
           }
@@ -471,7 +471,7 @@ class UserController extends ApiController
           'rolId' => '2'
         ]);
       $user->phone_number= '+'.$data['cellphone'];   // Don't forget specify country code.
-     // $user->notify(new SMSCode($user->verification_token));
+      $user->notify(new SMSCode($user->verification_token));
 
       return response()->json([$request->all()], 200);
      }
