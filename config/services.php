@@ -21,9 +21,9 @@ return [
     ],
 
     'nexmo' => [
-      'key' => '36190a45',
-      'secret' => 'r8u0NiHsiqnlFyYs',
-      'from' => 'FetchUp_App'
+      'key' => '09c45bc6',
+      'secret' => 'Ezqshq9yBtuIP7Yg',
+      'from' => 'Escritorio Legal'
 
     ],
 

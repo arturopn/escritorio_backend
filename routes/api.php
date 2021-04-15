@@ -120,4 +120,4 @@ Route::resource('services', 'ServicesAPIController');
 
 Route::resource('users_lawyer_chats', 'UsersLawyerChatAPIController');
 
-Route::post('notificacion/sendNotification', 'UsersLawyerChatAPIController@sendNotification');
+Route::post('notificacion/sendNotification/{userId}', 'UsersLawyerChatAPIController@sendNotification');
