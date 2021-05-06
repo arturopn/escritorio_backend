@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0784df14-1e80-4b3f-89ff-d8cd6a295d19" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0784df14-1e80-4b3f-89ff-d8cd6a295d19" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -229,11 +227,15 @@
       <workItem from="1611950363416" duration="7000" />
       <workItem from="1612290451992" duration="460000" />
       <workItem from="1612291248470" duration="677000" />
+<<<<<<< HEAD
       <workItem from="1612411387696" duration="449000" />
       <workItem from="1612412162493" duration="19000" />
       <workItem from="1612884677742" duration="109000" />
       <workItem from="1612980594271" duration="1817000" />
       <workItem from="1612982540761" duration="65000" />
+      <workItem from="1618458518161" duration="148000" />
+=======
+>>>>>>> 0658936787224df3acc5edb714ba7d234e5d998b
     </task>
     <servers />
   </component>
@@ -251,5 +253,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add" />
+    <option name="LAST_COMMIT_MESSAGE" value="add" />
   </component>
 </project>
