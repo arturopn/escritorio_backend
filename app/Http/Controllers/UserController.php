@@ -111,19 +111,8 @@ class UserController extends ApiController
 
     public function getUserByEmail($email){
       $user = DB::table('users')
-      ->join('user_roles', 'user_roles.userId', '=', 'users.userId')
-      ->where('email', $email)->first();
+      ->where('googleToken', $email)->first();
 
-      $owner = DB::table('user_roles')->where([
-        ['userId', '=', $user->userId],
-        ['rolId', '=', '2'],
-      ])->first();
-
-      if (!empty($owner)) {
-        $user->isOwner = true;
-      } else {
-        $user->isOwner = false;
-      }
       //$user = DB::select('SELECT * FROM users WHERE email = ?' , $email);
       return response()->json(['data' => $user], 201);
       //return "hola";
