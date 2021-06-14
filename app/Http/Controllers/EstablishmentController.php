@@ -173,7 +173,7 @@ class EstablishmentController extends ApiController
     }
 
     public function calculate_payment(Request $request){
-      $total = 10000;
+      $total = $request->total;
       $discount = 0;
       return response()->json(['total' => ($total - $discount )]);
     }
