@@ -38,7 +38,7 @@ class ServicesAPIController extends AppBaseController
             $request->except(['skip', 'limit']),
             $request->get('skip'),
             $request->get('limit')
-        );
+        )->orderBy('price');
 
         return $this->sendResponse($services->toArray(), 'Services retrieved successfully');
     }
