@@ -34,11 +34,12 @@ class ServicesAPIController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $services = $this->servicesRepository->orderBy('price', 'desc')->get(
+        /*$services = $this->servicesRepository->orderBy('price', 'desc')->all(
             $request->except(['skip', 'limit']),
             $request->get('skip'),
             $request->get('limit')
-        );
+        );*/
+        $services = Services::orderBy('price')->get();
 
         return $this->sendResponse($services->toArray(), 'Services retrieved successfully');
     }
