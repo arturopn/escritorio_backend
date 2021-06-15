@@ -34,7 +34,7 @@ class ServicesAPIController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $services = $this->servicesRepository->orderBy('price')->all(
+        $services = $this->servicesRepository->orderBy('price', 'desc')->get(
             $request->except(['skip', 'limit']),
             $request->get('skip'),
             $request->get('limit')
