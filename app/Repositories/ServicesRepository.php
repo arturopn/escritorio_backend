@@ -23,6 +23,10 @@ class ServicesRepository extends BaseRepository
         'status'
     ];
 
+    protected $orderable = [
+        'price'
+    ];
+
     /**
      * Return searchable fields
      *
